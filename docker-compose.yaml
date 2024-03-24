@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: kiadev
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: learn_library
+    ports:
+      - "5432:5432"
+    volumes:
+        - ./data/db:/var/lib/postgresql/datas
